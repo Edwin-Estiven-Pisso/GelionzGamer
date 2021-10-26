@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.gelionz.gelionzgamer">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GelionzGamer">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Contactanos"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".Menu" />
+        <activity android:name=".Eventos" />
+        <activity android:name=".InscripcionEventos" />
+        <activity android:name=".Perfil" />
+        <activity android:name=".Registro" />
+        <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
