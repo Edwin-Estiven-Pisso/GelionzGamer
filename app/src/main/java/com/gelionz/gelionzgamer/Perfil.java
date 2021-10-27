@@ -4,7 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -15,13 +19,27 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Perfil extends AppCompatActivity {
 
+    List<User> listaUsuarios = new ArrayList<>();
+    TextView txtresultado;
+    Button btnListarUsuarios;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
+
+        btnListarUsuarios = findViewById(R.id.btnListarUsuarios);
+        txtresultado = findViewById(R.id.txtresultado);
+
+        btnListarUsuarios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listarUsuarios();
+            }
+        });
     }
 
-/*    public void listarUsuarios(){
+    public void listarUsuarios() {
         Retrofit retorfit = new Retrofit.Builder()
                 .baseUrl("https://gelionz.herokuapp.com/webservices/")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -34,22 +52,24 @@ public class Perfil extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<User>> call, Response<List<User>> response) {
                 listaUsuarios = response.body();
-                for(User u: listaUsuarios){
+                for (User u : listaUsuarios) {
                     String resultado = "";
-                    resultado+= "Usuario: " + u.getUsername() + "\n";
-                    resultado+= "Email: " + u.getEmail() + "\n";
-                    resultado+= "Nombres: " + u.getNombres() + "\n";
-                    resultado+= "Apellidos: " + u.getApellidos() + "\n";
-                    resultado+= "Documento: " + u.getDocumento() + "\n";
-                    resultado+= "Celular: " + u.getCelular() + "\n";
-                    resultado+= "Genero: " + u.getGenero() + "\n";
-                    resultado+= "Rol: " + u.getRol_de_usuario() + "\n";
+                    resultado += "Usuario: " + u.getUsername() + "\n";
+                    resultado += "Email: " + u.getEmail() + "\n";
+                    resultado += "Nombres: " + u.getNombres() + "\n";
+                    resultado += "Apellidos: " + u.getApellidos() + "\n";
+                    resultado += "Documento: " + u.getDocumento() + "\n";
+                    resultado += "Celular: " + u.getCelular() + "\n";
+                    resultado += "Genero: " + u.getGenero() + "\n";
+                    resultado += "Rol: " + u.getRol_de_usuario() + "\n";
                     txtresultado.append(resultado);
                 }
-                Log.e("lista",listaUsuarios.toString());
+                Log.e("lista", listaUsuarios.toString());
             }
+
             @Override
             public void onFailure(Call<List<User>> call, Throwable t) {
             }
-        });*/
+        });
+    }
 }
