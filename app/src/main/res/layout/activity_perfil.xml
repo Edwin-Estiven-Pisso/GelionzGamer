@@ -11,9 +11,9 @@
         android:id="@+id/imgLogo"
         android:layout_width="173dp"
         android:layout_height="95dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginLeft="116dp"
         app:layout_constraintBottom_toTopOf="@+id/btnInicio"
-        app:layout_constraintEnd_toStartOf="@+id/imgperfil"
-        app:layout_constraintHorizontal_bias="0.721"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
@@ -25,11 +25,14 @@
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
+        android:layout_marginRight="28dp"
         android:background="@drawable/perfil_blanco"
         app:layout_constraintBottom_toTopOf="@+id/btnContactanos"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imgLogo"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.076" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnInicio"
@@ -96,32 +99,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnInicio" />
 
+
     <TextView
         android:id="@+id/textView4"
         android:layout_width="188dp"
         android:layout_height="34dp"
-        android:layout_marginTop="216dp"
-        android:gravity="center"
+        android:layout_marginTop="60dp"
         android:text="Edwin Estiven Pisso"
         android:textColor="#FFFFFF"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.287"
+        app:layout_constraintHorizontal_bias="0.318"
         app:layout_constraintStart_toEndOf="@+id/imgperfil2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btnInscripción" />
+<!--        android:gravity="center"-->
 
 
     <TextView
         android:id="@+id/txtresultado"
         android:layout_width="188dp"
-        android:layout_height="34dp"
-        android:layout_marginBottom="432dp"
-        android:text="Informacion"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.789"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_height="474dp"
 
+        android:hint="Detalles del Usuario"
+        android:textColorHint="#79D3D3D3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.798"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <Button
         android:id="@+id/btnListarUsuarios"
