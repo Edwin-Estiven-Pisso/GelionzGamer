@@ -57,8 +57,4 @@ public interface ApiService {
 
     @DELETE("api/usuario/")
     Call<User> eliminarUser(@Query("id") String id);
-
-
-
-
 }
