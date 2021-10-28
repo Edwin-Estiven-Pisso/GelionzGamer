@@ -9,10 +9,11 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="ColorLetrasBlancas">#FFFFFF</color>
+    <color name="ColorLetrasNegras">#000000</color>
+    <color name="ColorLetrasHint">#79D3D3D3</color>
     <color name="ColorEditext">#46FFFFFF</color>
     <color name="ColorBarraSuperior">#75000000</color>
-    <color name="Azul">#3961DF</color>
+    <color name="ColorAzul">#3961DF</color>
     <color name="ColorBlanco">#FFFFFF</color>
     <color name="ColorBotones">#FFFFFF</color>
-    <color name="ColorLetrasBotones">#000000</color>
 </resources>

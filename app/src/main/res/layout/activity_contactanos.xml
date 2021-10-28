@@ -38,7 +38,7 @@
         android:layout_marginTop="100dp"
         android:backgroundTint="@color/ColorBotones"
         android:text="Inicio"
-        android:textColor="@color/ColorLetrasBotones"
+        android:textColor="@color/ColorLetrasNegras"
         android:textSize="11dp"
         app:layout_constraintEnd_toStartOf="@+id/btnEventos"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,7 +51,7 @@
         android:layout_marginTop="100dp"
         android:backgroundTint="@color/ColorBotones"
         android:text="Eventos"
-        android:textColor="@color/ColorLetrasBotones"
+        android:textColor="@color/ColorLetrasNegras"
         android:textSize="11dp"
         app:layout_constraintEnd_toStartOf="@+id/btnInscripción"
         app:layout_constraintStart_toEndOf="@+id/btnInicio"
@@ -64,7 +64,7 @@
         android:layout_marginTop="100dp"
         android:backgroundTint="@color/ColorBotones"
         android:text="INSCRIPCIÓN"
-        android:textColor="@color/ColorLetrasBotones"
+        android:textColor="@color/ColorLetrasNegras"
         android:textSize="11dp"
         app:layout_constraintEnd_toStartOf="@+id/btnContactanos"
         app:layout_constraintStart_toEndOf="@+id/btnEventos"
@@ -78,7 +78,7 @@
         android:layout_marginTop="100dp"
         android:backgroundTint="@color/ColorBotones"
         android:text="CONTACTO"
-        android:textColor="@color/ColorLetrasBotones"
+        android:textColor="@color/ColorLetrasNegras"
         android:textSize="11dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnInscripción"
@@ -182,7 +182,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageButton2"
         app:layout_constraintTop_toBottomOf="@+id/btnEnviarContactanos"
-        app:layout_constraintVertical_bias="0.0"></ImageButton>
+        app:layout_constraintVertical_bias="0.0">
+    </ImageButton>
 
     <ImageButton
         android:id="@+id/imageButton4"
@@ -195,7 +196,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageButton3"
         app:layout_constraintTop_toBottomOf="@+id/btnEnviarContactanos"
-        app:layout_constraintVertical_bias="0.0"></ImageButton>
+        app:layout_constraintVertical_bias="0.0">
+
+    </ImageButton>
 
     <ImageButton
         android:id="@+id/btnyoutube"
@@ -208,6 +211,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageButton4"
         app:layout_constraintTop_toBottomOf="@+id/btnEnviarContactanos"
-        app:layout_constraintVertical_bias="0.0"></ImageButton>
+        app:layout_constraintVertical_bias="0.0">
+    </ImageButton>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
