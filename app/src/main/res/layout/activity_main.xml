@@ -8,7 +8,6 @@
     android:background="@drawable/fondo_1"
     tools:context=".MainActivity">
 
-
   <ImageView
       android:id="@+id/imgLogo"
       android:layout_width="335dp"

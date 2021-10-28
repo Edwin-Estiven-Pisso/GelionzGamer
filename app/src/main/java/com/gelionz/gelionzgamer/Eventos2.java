@@ -78,8 +78,7 @@ public class Eventos2 {
     public void setOrganizador(String organizador) {
         this.organizador = organizador;
     }
-
-    @Override
+        @Override
     public String toString() {
         return "Eventos2{" +
                 "tipo_evento='" + tipo_evento + '\'' +

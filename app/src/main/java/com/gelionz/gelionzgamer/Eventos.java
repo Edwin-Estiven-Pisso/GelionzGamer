@@ -1,9 +1,11 @@
 package com.gelionz.gelionzgamer;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
@@ -17,8 +19,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class Eventos extends AppCompatActivity {
 
     List<Eventos2> listaEventos = new ArrayList<>();
-    TextView txtEventos;
-    Button btnListar;
+    ImageButton imgPerfil;
+    Button btnInicio, btnEventos, btnInscripción, btnContactanos;
+    TextView txtListaEventos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +30,7 @@ public class Eventos extends AppCompatActivity {
 
         referenciar();
 
-        btnListar.setOnClickListener(new View.OnClickListener() {
+        btnEventos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 listadoEventos();
@@ -37,9 +40,55 @@ public class Eventos extends AppCompatActivity {
     }
 
     public void referenciar(){
-        txtEventos=findViewById(R.id.txtEventos);
-        btnListar=findViewById(R.id.btnListar);
 
+        txtListaEventos=findViewById(R.id.txtListaEventos);
+        imgPerfil=findViewById(R.id.imgperfil);
+        btnInicio=findViewById(R.id.btnInicio);
+        btnEventos=findViewById(R.id.btnEventos);
+        btnInscripción=findViewById(R.id.btnInscripción);
+        btnContactanos=findViewById(R.id.btnContactanos);
+
+
+        //NAVEGACIÓN ENTRE MODULOS DE LA APLICACIÓN
+        imgPerfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Eventos.this,Perfil.class);
+                startActivity(intent);
+            }
+        });
+
+        btnInicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Eventos.this,Menu.class);
+                startActivity(intent);
+            }
+        });
+
+        btnEventos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Eventos.this,Eventos.class);
+                startActivity(intent);
+            }
+        });
+
+        btnContactanos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Eventos.this,Contactanos.class);
+                startActivity(intent);
+            }
+        });
+
+        btnInscripción.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Eventos.this,InscripcionEventos.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public void listadoEventos(){
@@ -47,6 +96,7 @@ public class Eventos extends AppCompatActivity {
                 .baseUrl("https://gelionz.herokuapp.com/webservices/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
+
         EventosGet eventosGet = retorfit.create(EventosGet.class);
         Call<List<Eventos2>> lista = eventosGet.getEventos();
         lista.enqueue(new Callback<List<Eventos2>>() {
@@ -58,11 +108,12 @@ public class Eventos extends AppCompatActivity {
 //                  resultado += "Id: " + u.getId() + "\n";
                     resultado += "Tipo Evento: " + u.getTipo_evento() + "\n";
                     resultado += "Fecha: " + u.getFecha_hora_evento() + "\n";
+                    resultado += "Valor Evento" + u.getValor_evento() + "\n";
                     resultado += "Ganador: " + u.getGanador_evento() + "\n";
                     resultado += "Nro. Jugadores: " + u.getCantidad_jugadores() + "\n";
                     resultado += "Estado: " + u.getEstado() + "\n";
                     resultado += "Organizador: " + u.getOrganizador() + "\n";
-                    txtEventos.append(resultado);
+                    txtListaEventos.append(resultado);
                 }
                 Log.e("lista", listaEventos.toString());
             }

@@ -212,7 +212,7 @@
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/ColorBotones"
         android:text="REGISTRAR USUARIO"
-        android:textColor="@color/ColorLetrasBotones"
+        android:textColor="@color/ColorLetrasNegras"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ConfirmarContraseña" />
