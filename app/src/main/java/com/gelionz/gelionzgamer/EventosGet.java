@@ -10,4 +10,5 @@ public interface EventosGet {
     @GET("api/evento/")
     Call<List<Eventos2>> getEventos();
 
+
 }
