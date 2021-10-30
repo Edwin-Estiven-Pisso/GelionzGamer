@@ -18,8 +18,8 @@ public interface ApiService {
     @GET("api/usuario/")
     Call<List<User>> getUser();
 
-    @GET("api/usuario/")
-    Call<List<User>> getUserUsername(@Query("username") String username);
+/*    @GET("api/usuario/")
+    Call<List<User>> getUserUsername(@Query("username") String username);*/
 
     /*@Multipart
     @POST("api/usuario/")
@@ -37,10 +37,10 @@ public interface ApiService {
 
     );*/
 
-    @POST("api/usuario/")
-    Call<User> insertUser(@Body UserPost user);
+/*    @POST("api/usuario/")
+    Call<User> insertUser(@Body  user);*/
 
-    @Multipart
+/*    @Multipart
     @PUT("api/usuario/")
     Call<User> updateUser(@Query("id") String id,
                           @Part("username") RequestBody username,
@@ -53,12 +53,9 @@ public interface ApiService {
                           @Part("usuario_activo") RequestBody usuario_activo,
                           @Part("rol_de_usuario") RequestBody rol_de_usuario,
                           @Part("password") RequestBody password
-    );
+    );*/
 
-    @DELETE("api/usuario/")
+/*    @DELETE("api/usuario/")
     Call<User> eliminarUser(@Query("id") String id);
-
-
-
-
+    */
 }

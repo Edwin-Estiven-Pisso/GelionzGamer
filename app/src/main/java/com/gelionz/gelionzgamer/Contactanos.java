@@ -59,7 +59,7 @@ public class Contactanos extends AppCompatActivity {
 
         session = Session.getDefaultInstance(props, new Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("gelionzgameroficial@gmail.com", "GelionzGamerOficial");
+                return new PasswordAuthentication("gelionzgamercomentarios@gmail.com", "ComentariosGelionzGamer2021");
             }
         });
 

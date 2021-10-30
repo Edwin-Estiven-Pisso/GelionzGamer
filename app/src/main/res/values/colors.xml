@@ -15,4 +15,6 @@
     <color name="ColorBlanco">#FFFFFF</color>
     <color name="ColorBotones">#FFFFFF</color>
     <color name="ColorLetrasBotones">#000000</color>
+    <color name="ColorLetrasHint">#3EFFFFFF</color>
+
 </resources>

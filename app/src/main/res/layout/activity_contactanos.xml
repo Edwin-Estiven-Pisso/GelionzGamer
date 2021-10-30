@@ -107,10 +107,9 @@
         android:layout_marginTop="20dp"
         android:backgroundTint="#FBFBFB"
         android:ems="10"
-        android:hint="Correo Electronico"
+        android:text="gelionzgameroficial@gmail.com"
         android:inputType="textPersonName"
         android:textColor="#FFFFFF"
-        android:textColorHint="#D3D3D3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
@@ -125,7 +124,7 @@
         android:hint="Asunto"
         android:inputType="textPersonName"
         android:textColor="#FFFFFF"
-        android:textColorHint="#D3D3D3"
+        android:textColorHint="@color/ColorLetrasHint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
@@ -139,7 +138,7 @@
         android:ems="10"
         android:hint="Escribe aqui tu Comentario"
         android:textColor="#FFFFFF"
-        android:textColorHint="#D3D3D3"
+        android:textColorHint="@color/ColorLetrasHint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
@@ -182,7 +181,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageButton2"
         app:layout_constraintTop_toBottomOf="@+id/btnEnviarContactanos"
-        app:layout_constraintVertical_bias="0.0"></ImageButton>
+        app:layout_constraintVertical_bias="0.0">
+    </ImageButton>
 
     <ImageButton
         android:id="@+id/imageButton4"
@@ -195,7 +195,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageButton3"
         app:layout_constraintTop_toBottomOf="@+id/btnEnviarContactanos"
-        app:layout_constraintVertical_bias="0.0"></ImageButton>
+        app:layout_constraintVertical_bias="0.0">
+    </ImageButton>
 
     <ImageButton
         android:id="@+id/btnyoutube"
@@ -208,6 +209,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageButton4"
         app:layout_constraintTop_toBottomOf="@+id/btnEnviarContactanos"
-        app:layout_constraintVertical_bias="0.0"></ImageButton>
+        app:layout_constraintVertical_bias="0.0">
+    </ImageButton>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

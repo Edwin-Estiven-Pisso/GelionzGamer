@@ -132,7 +132,7 @@
         android:id="@+id/txtSpinner"
         android:layout_width="158dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
         android:text="Tipo de Usuario:"
         android:textColor="#FFFFFF"
         android:textSize="18dp"
@@ -141,15 +141,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/CorreoElectronico" />
 
-    <Spinner
-        android:id="@+id/spinner_tipo_usuario"
-        android:layout_width="167dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.827"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CorreoElectronico" />
+
+    <EditText
+        android:id="@+id/TipoUsuario"
+        android:layout_width="168dp"
+        android:layout_height="24dp"
+        android:background="@color/ColorEditext"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:textColor="#FFFFFF"
+        android:text="Jugador"
+        app:layout_constraintBottom_toTopOf="@+id/txtcontraseña"
+        app:layout_constraintStart_toEndOf="@+id/txtSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/CorreoElectronico"
+        app:layout_constraintVertical_bias="0.545" />
 
     <TextView
         android:id="@+id/txtcontraseña"
