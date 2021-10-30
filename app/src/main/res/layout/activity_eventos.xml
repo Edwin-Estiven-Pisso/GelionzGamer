@@ -39,7 +39,7 @@
         android:layout_marginTop="100dp"
         android:backgroundTint="@color/ColorBotones"
         android:text="Inicio"
-        android:textColor="@color/ColorLetrasBotones"
+        android:textColor="@color/ColorLetrasNegras"
         android:textSize="11dp"
         app:layout_constraintEnd_toStartOf="@+id/btnEventos"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,7 +52,7 @@
         android:layout_marginTop="100dp"
         android:backgroundTint="@color/ColorBotones"
         android:text="Eventos"
-        android:textColor="@color/ColorLetrasBotones"
+        android:textColor="@color/ColorLetrasNegras"
         android:textSize="11dp"
         app:layout_constraintEnd_toStartOf="@+id/btnInscripción"
         app:layout_constraintStart_toEndOf="@+id/btnInicio"
@@ -65,7 +65,7 @@
         android:layout_marginTop="100dp"
         android:backgroundTint="@color/ColorBotones"
         android:text="INSCRIPCIÓN"
-        android:textColor="@color/ColorLetrasBotones"
+        android:textColor="@color/ColorLetrasNegras"
         android:textSize="11dp"
         app:layout_constraintEnd_toStartOf="@+id/btnContactanos"
         app:layout_constraintStart_toEndOf="@+id/btnEventos"
@@ -78,10 +78,20 @@
         android:layout_marginTop="100dp"
         android:backgroundTint="@color/ColorBotones"
         android:text="CONTACTO"
-        android:textColor="@color/ColorLetrasBotones"
+        android:textColor="@color/ColorLetrasNegras"
         android:textSize="11dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnInscripción"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtListaEventos"
+        android:layout_width="match_parent"
+        android:layout_height="569dp"
+        android:background="@color/ColorEditext"
+        android:textColor="@color/ColorLetrasBlancas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEventos" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

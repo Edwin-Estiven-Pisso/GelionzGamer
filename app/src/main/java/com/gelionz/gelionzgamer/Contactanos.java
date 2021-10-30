@@ -3,6 +3,7 @@ package com.gelionz.gelionzgamer;
 import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.EditText;
 
@@ -20,9 +21,15 @@ import javax.mail.internet.MimeMessage;
 import android.os.AsyncTask;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class Contactanos extends AppCompatActivity {
+
+    ImageButton imgPerfil;
+    Button btnInicio, btnEventos, btnInscripción, btnContactanos;
+
+//----------------------------------------------------------------------------------------------------------
 
     Session session = null;
     ProgressDialog pdialog = null;
@@ -34,14 +41,66 @@ public class Contactanos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contactanos);
-        context = this;
 
+        referenciar();
+
+        context = this;
         Button login = (Button) findViewById(R.id.btnEnviarContactanos);
         reciep = (EditText) findViewById(R.id.txtCorreoContactanos);
         sub = (EditText) findViewById(R.id.txtAsuntoContactanos);
         msg = (EditText) findViewById(R.id.txtMensajeContactanos);
 
         login.setOnClickListener(this::onClick);
+    }
+    public void referenciar(){
+
+        imgPerfil=findViewById(R.id.imgperfil);
+        btnInicio=findViewById(R.id.btnInicio);
+        btnEventos=findViewById(R.id.btnEventos);
+        btnInscripción=findViewById(R.id.btnInscripción);
+        btnContactanos=findViewById(R.id.btnContactanos);
+
+
+        //NAVEGACIÓN ENTRE MODULOS DE LA APLICACIÓN
+        imgPerfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Contactanos.this,Perfil.class);
+                startActivity(intent);
+            }
+        });
+
+        btnInicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Contactanos.this,Menu.class);
+                startActivity(intent);
+            }
+        });
+
+        btnEventos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Contactanos.this,Eventos.class);
+                startActivity(intent);
+            }
+        });
+
+        btnContactanos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Contactanos.this,Contactanos.class);
+                startActivity(intent);
+            }
+        });
+
+        btnInscripción.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Contactanos.this,InscripcionEventos.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public void onClick(View v) {
